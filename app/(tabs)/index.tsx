@@ -17,7 +17,7 @@ export default function Index() {
     refetch: refetchMoviesListDataByPopularity,
     isError: isErrorMoviesListDataByPopularity,
   } = useGetMoviesListByPopularity();
-  console.log('🚀 ~ Index ~ moviesListDataByPopularity:', moviesListDataByPopularity);
+
   return (
     <View className="flex-1 bg-primary">
       <Image source={images.bg} className="absolute w-full z-0" />
