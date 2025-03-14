@@ -3,7 +3,7 @@ import React from 'react';
 import { Tabs } from 'expo-router';
 import { images } from '@/constants/images';
 import { icons } from '@/constants/icons';
-import { TabIcon } from '../components/TabIcon';
+import TabIcon from '../components/TabIcon';
 
 const _layout = () => {
   return (
@@ -20,11 +20,11 @@ const _layout = () => {
           backgroundColor: '#0f0d23',
           borderRadius: 50,
           marginHorizontal: 20,
-          marginBottom: 36,
+          marginBottom: 20,
           height: 52,
           position: 'absolute',
           overflow: 'hidden',
-          borderWidth: 1,
+          borderWidth: 0,
           borderColor: '#0f0d23',
         },
       }}

@@ -6,13 +6,13 @@ interface TabIconProps {
   icon: ImageSourcePropType | undefined;
   title: string;
 }
-export const TabIcon = ({ focused, icon, title }: TabIconProps) => {
+const TabIcon = ({ focused, icon, title }: TabIconProps) => {
   if (focused) {
     return (
       <>
         <ImageBackground
           source={images.highlight}
-          className="flex flex-row w-full flex-1 min-w-[112px] min-h-16 mt-4 justify-center items-center rounded-full overflow-hidden"
+          className="flex  flex-row w-full flex-1  min-w-[112px] min-h-16 mt-4 justify-center items-center rounded-full overflow-hidden"
         >
           <Image source={icon} className="size-5" tintColor={'#151312'} />
           <Text className="text-secondary text-base font-semibold ml-2">{title}</Text>
@@ -27,3 +27,4 @@ export const TabIcon = ({ focused, icon, title }: TabIconProps) => {
     );
   }
 };
+export default TabIcon;
