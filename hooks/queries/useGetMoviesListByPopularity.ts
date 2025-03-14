@@ -1,7 +1,7 @@
 import api from '@/config/api';
 import { useQuery } from '@tanstack/react-query';
 
-export const useGetMoviesListByPopularity = (query?: string) => {
+export const useGetMoviesListByPopularity = (query?: string, autoFetch?: boolean) => {
   const endPoint = query
     ? `/search/movie?query=${encodeURIComponent(query)}`
     : `/discover/movie?sort_by=popularity.desc`;
@@ -11,7 +11,7 @@ export const useGetMoviesListByPopularity = (query?: string) => {
       const request = await api.get(endPoint);
       return request;
     },
-    enabled: true,
+    enabled: autoFetch,
   });
 
   return { data, isLoading, refetch, isError };

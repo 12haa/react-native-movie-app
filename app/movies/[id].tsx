@@ -3,10 +3,9 @@ import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
 
 const MovieDetails = () => {
-  const { id } = useLocalSearchParams<{ id: string }>();
   return (
     <View>
-      <Text>{id}</Text>
+      <Text></Text>
     </View>
   );
 };
